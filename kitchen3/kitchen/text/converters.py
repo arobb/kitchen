@@ -338,8 +338,6 @@ def getwriter(encoding):
             codecs.StreamWriter.__init__(self, stream, errors)
 
         def encode(self, msg, errors='replace'):
-            print(type(msg))
-            print(repr(msg))
             return (to_bytes(msg, encoding=self.encoding, errors=errors),
                     len(msg))
 
